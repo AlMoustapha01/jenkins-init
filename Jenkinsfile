@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building application..'
+                scripts{
+                    def test = 22+5>60? 'faux':'vrai'
+                }
             }
         }
         stage('Test') {
